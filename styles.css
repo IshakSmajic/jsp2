@@ -1,0 +1,205 @@
+body {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    font-family: Arial, Helvetica, sans-serif; 
+    margin: 0;
+    width: 100%;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #040e22;
+}
+.text-with-button {
+    color: white;
+    margin-left: 20vh;
+    margin-top: 25vh;
+}
+.text-with-button img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+.text-with-button button {
+    background-color: #182a3e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 17px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.text-with-button button:hover {
+    background-color: #0f1c2e;
+    transition: background-color 0.4s, transform 0.4s;
+    transform: scale(1.05);
+}
+.hero-image img {
+    width: 350px;
+    margin-right: 25vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+/* Middle section */
+.middle-part {
+    display: flex;
+    width: 100%;
+    background-color: #0a1b3e;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 700px;
+}
+.left-side-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.left-side-images img {
+    height: 94vh;
+    width: auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    margin-top: 15vh;
+    margin-left: 12vh;
+}
+.right-side-text {
+    margin-top: 12vh;
+    margin-right: 12vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 1 1 0;
+    padding-left: 48px;
+    color: white;
+    height: 100%;
+}
+.right-side-text h1 {
+    margin-bottom: 32px;
+}
+.hoot-type {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0;
+    height: 225px;
+}
+.hoot-type img {
+    height: 80%;
+    width: auto;
+    border-radius: 12px;
+    margin-right: 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.hoot-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.hoot-info h5 {
+    margin: 0 0 12px 0;
+    font-size: 1.2em;
+}
+.hoot-info p {
+    margin: 0;
+    font-size: 1em;
+    line-height: 1.5;
+}
+.HootMeButton {
+    background-color: #182a3e;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    align-self: center;
+    margin-bottom: 5%;
+}
+.HootMeButton:hover {
+    background-color: #0f1c2e;
+    transition: background-color 0.4s, transform 0.4s;
+    transform: scale(1.05);
+}
+
+/* Reviews */
+.lower-part {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #1c2e53;
+    padding: 40px 100px;
+    box-sizing: border-box;
+    color: white;
+}
+.lower-part .second-text {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/* Footer */
+.footer {
+    background-color: #040e22;
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    padding: 20px;
+}
+
+/* === Mobile overrides === */
+@media (max-width: 768px) {
+    /* Hero stacks */
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+    .text-with-button {
+        margin: 20px 0;
+    }
+    .hero-image img {
+        max-width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    /* Middle part stacks */
+    .middle-part {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        min-height: auto;
+    }
+    .left-side-images img {
+        max-width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+    .right-side-text {
+        margin: 20px 0;
+        padding: 0;
+        text-align: center;
+        align-items: center;
+    }
+    .hoot-type {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .hoot-type img {
+        margin: 0 0 12px 0;
+    }
+
+    /* Reviews stack */
+    .lower-part {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+}
